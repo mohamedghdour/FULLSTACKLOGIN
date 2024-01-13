@@ -1,0 +1,137 @@
+/* Add this to your existing styles.css or create a new one */
+body{
+    background-image: url(./motifbg.jpg);
+
+}
+
+.pnglogo{
+    width: 50vh;
+    position: relative;
+    bottom: 20px;
+}
+
+.dot {
+    height: 20px;
+    width: 20px;
+    margin: 10px 10px 0 0;
+    box-shadow: 0px 0px 10px 2px #10B981 ;
+    background-color: #10B981;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+.login-container{
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    background-color: white;
+    padding-top: 10vh;
+    width: 100vh;
+    height: 60vh;
+}
+
+.col-md-12{
+    width: 70%;
+}
+
+
+
+.btn-login{
+    background-color: #10B981;
+    width: 100%;
+    border: 0;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    padding: 7px;
+}
+
+.check{
+    margin-bottom: 25px;
+    border: 0;
+    background-color: transparent;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    z-index: 3;
+}
+
+.user{
+    margin-bottom: 25px;
+    border: 0;
+    background-color: transparent;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 3;
+}
+
+
+input{
+    margin-bottom: 10px;
+}
+
+.container.mt-5 {
+    width: 100vh;
+    height: 70vh;
+    display: column;
+}
+.divlogo{
+    width: 100vh;
+    display: flex;
+    justify-content: center;
+}
+  
+.col-md-12 {
+    text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .login-container {
+        width: 50vh;
+        height: 50vh;
+    }
+    .container{
+        padding: 0 0 0 0;
+    }
+    .pnglogo{
+        width: 25vh;
+        position: relative;
+        bottom: 20px;
+    }
+    .divlogo{
+        width: 50vh;
+        display: flex;
+        justify-content: center;
+    }
+    .container.mt-5 {
+        width: 50vh;
+    }
+
+  }
+@media only screen and (max-width: 480px) {
+    .login-container {
+        width: 40vh;
+        height: 60vh;
+    }
+    .container{
+        padding: 0 0 0 0;
+    }
+    .pnglogo{
+        width: 20vh;
+        position: relative;
+        bottom: 20px;
+    }
+    .divlogo{
+        width: 40vh;
+        display: flex;
+        justify-content: center;
+    }
+    .container.mt-5 {
+        width: 40vh;
+    }
+
+  }
+
+  

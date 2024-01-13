@@ -1,6 +1,9 @@
 // React component
 
 import React, { useState } from 'react';
+import "../App.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEye, faEyeSlash, faUser } from '@fortawesome/free-solid-svg-icons';
 
 function Login({ setIsAuth }) {
   const [email, setEmail] = useState('');
@@ -31,41 +34,41 @@ function Login({ setIsAuth }) {
 
   return (
     <div className="container mt-5">
-      <div className="row justify-content-center">
-        <div className="col-md-6">
+      <div className='divlogo'><img  className='pnglogo' src="./logo.png" alt="logo" /></div>
+      <div className="login-container">
+      <div className="col-md-12 form">
           <form onSubmit={handleLogin}>
-            <h2 className="text-center mb-4">Login</h2>
+            <h2 style={{textAlign: "start",display: "flex" , color: "#10B981", textShadow: "0px 2px 10px rgba(0, 0, 0, 0.3)"}} className="text mb-4"><span class="dot"></span>Login</h2>
             <div className="mb-3">
-              <label htmlFor="email" className="form-label">
-                Email address
-              </label>
+              <div className='input-group' >
               <input
                 type="email"
                 className="form-control"
                 id="email"
                 aria-describedby="emailHelp"
-                placeholder="Enter your email"
+                placeholder="USER-EMAIL"
                 onChange={(e) => setEmail(e.target.value)}
                 />
+                <FontAwesomeIcon className='user' icon={faUser} />
+              </div>
             </div>
+            
             <div className="mb-3">
-              <label htmlFor="password" className="form-label">
-                Password
-              </label>
               <div className="input-group">
                 <input
                   type={showPassword ? 'text' : 'password'}
                   className="form-control"
                   id="password"
-                  placeholder="Enter your password"
+                  placeholder="USER-PASSWORD"
                   onChange={(e) => setPassword(e.target.value)}
                 />
                 <button
                   type="button"
-                  className="btn btn-outline-secondary"
+                  className="check"
                   onClick={() => setShowPassword(!showPassword)}
                   >
-                  {showPassword ? 'Masquer' : 'Afficher'}
+                  {showPassword ? <FontAwesomeIcon icon={faEyeSlash} /> : <FontAwesomeIcon icon={faEye} />}
+                  
                 </button>
               </div>
               
@@ -75,8 +78,8 @@ function Login({ setIsAuth }) {
           {errors }
         </div>
       )}
-            <button type="submit" className="btn btn-primary">
-              Login
+            <button type="submit" className="btn-login">
+              LOGIN
             </button>
           </form>
         </div>
